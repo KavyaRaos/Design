@@ -1,0 +1,43 @@
+<body>
+  <a href="#" class="button">Learn more</a>
+</body>
+<style>
+  body{
+  background-color: #400F19;
+  height:50px;
+  width:50;
+  margin: 100px;
+  padding: 100px;
+  
+}
+.button{
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing:2px;
+  color:#fff;
+  outline: 2px solid #fff;;
+  padding: 30px 60px;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s;
+  font-size:30px;
+}
+.button:hover{
+  color:#400F19
+}
+.button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  transform: skew Y(50deg);
+  z-index: -1;
+  transition: width 1s;
+}
+.button:hover::before{
+  width: 100%;
+}
+</style>
