@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section>
+      <aside>
+        <h1>Login</h1>
+        <h5>Please enter your credentials</h5>
+        <form action="">
+          <input type="text" placeholder="Username" required/>
+          <input type="password" placeholder="Password" required/>
+          <button type="submit">Login</button>
+        </form>
+        <p>Not yet Registered? <a href="">Sign Up</a></p>
+      </aside>
+  
+  
+  
+    </section>
+  </body>
+  <style>
+    body{
+    background-image: ;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  section{
+    
+    margin: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section aside{
+    padding: 5%;
+    height: 30%;
+    background-color: #ccff90;
+    border-radius:5px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  section aside h1{
+      font-size: 50px;
+      text-align: center;
+      color: #555;
+      font-weight: normal;
+  }
+  
+  input[type=text],
+  input[type=password]{
+    width: calc(90% - 0px);
+    padding: 8px 10px;
+    font-size: 16px;
+    margin: 8px 0;
+    color:  #363636;
+    border: #c9c9c9 solid 1px;
+    border-radius: 3px;
+    transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  }
+  input[type=text]:focus,
+  input[type=password]:focus{
+    transform:scale(1.2);
+  }
+  button[type=submit]{
+    margin: 8px 0;
+    width: 95%;
+    border: none;
+    color: black;
+    background-color: #19f611;
+    padding: 8px 0;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+  }
+  button[type=submit]:hover{
+    background-color:#fbff03;
+  }
+  
+  section aside p{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+  
+  }
+  section aside p a{
+    color: rgb(255, 8, 169);
+    text-decoration: underline;
+  
+  }
+  section aside p a:hover {
+    text-decoration: none;
+    color:rgb(23, 41, 245);
+
+  }
+  </style>
+  
+</html>
