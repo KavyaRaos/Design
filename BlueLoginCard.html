@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logincard.css">
+</head>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Login</h2>
+            <form action="">
+                <input type="text" placeholder="Username" required/>
+                <input type="password" placeholder="Password" required/>
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                  </label>
+                  <i>Forgot password?</i>
+            <a href="#">LOGIN</a>
+          </div>
+        </div>
+    </div>
+</body>
+<style>
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing:content-box;
+  font-family: consoles;;
+}
+body
+{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #31395B;
+  background: linear-gradient(180deg,#31395B, #c7dff0) ;
+
+}
+.container
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+.container .box
+{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  color: #fff;
+  background: #95a9eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 30px;
+  transition: 0.5%;
+  border-radius: 30px;
+}
+.container .box:hover
+{
+  transform: translatorY(-20px);
+}
+.container .box::before
+{
+  content: '';
+  position: absolute;
+  top: 0%;
+  width:100%;
+  height:100%;
+  border-radius: 30px;
+  background: linear-gradient(45deg,#EDFcff,#d6f8ff);
+  
+}
+.container .box::after
+{
+  content: '';
+  position: absolute;
+  top: 0%;
+  width:100%;
+  height:100%;
+  background: linear-gradient(45deg,#d6f8ff,#EDFcff);
+  filter: blur(50px);
+  border-radius: 30px;
+}
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after
+{
+  background: linear-gradient(315deg,#03a9f4,#fff);
+}
+.container .box span
+{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: rgba(115, 142, 241, 0.6);
+  z-index: 2;
+  border-radius: 25px;
+}
+.container .box .content
+{
+  position:relative;
+  z-index: 10;
+  padding: 20px 40px;
+}
+.container .box .content h2
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+
+}
+input[type=text],
+input[type=password]{
+  width: calc(90% - 0px);
+  padding: 8px 10px;
+  font-size: 16px;
+  margin: 8px 0;
+  color:  #fff;
+  border: #31395b solid 1px;
+  background-color: #31395B;
+  border-radius: 3px;
+  transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.container .p
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #31395b;
+  border-radius: 3px;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: 300;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+  }
+.container .box .content a
+{
+  display: inline-block;
+  width: 60px;
+  position: center;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #31395b;
+  border-radius: 3px;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+</style>
+</html>
