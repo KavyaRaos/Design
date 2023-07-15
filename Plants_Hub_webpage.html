@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlantsHub.com</title>
+    <link rel="stylesheet" href="homepagebar.css" /></link>
+    <link rel="stylesheet" href="title.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    * {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+/* nav bar design */
+.navbar {
+  height: 100px;
+  display: inline-flex;
+  align-items: relative;
+  background-image: linear-gradient(to bottom right, #0b3b35, #09804c, #aff5b4);
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: relative;
+  list-style: none;
+  padding: 0 100px;
+}
+
+.menu li {
+  display: block;
+  height: 100%;
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #8e54e9;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-align: center;
+  padding: 0 10px;
+  margin-right: 30px;
+}
+
+/* Style 1 */
+/* Before Hover: Width of before element is set to 100% and height to 0 and Width of before element is*/
+/* set to 0% and height to 100%  */
+/* On Hover:  Top and bottom borders' of after element and left and right borders of before element*/
+/* is animated here by increasing the height of before element from 0 to 80% and width of after */
+/* element from 0 to 120% */
+
+.menu li:after,
+.menu li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+}
+
+.menu li:after {
+  width: 0%;
+  height: 80%;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.menu li:before {
+  width: 120%;
+  height: 0%;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transition: all 0.5s ease;
+}
+
+.menu li:hover::before {
+  height: 80%;
+}
+
+.menu li:hover::after {
+  width: 120%;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  padding: 0%;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+.main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-image: linear-gradient(180deg, #a9e0b7, #56c271, #09804c);
+}
+
+.cards {
+  background-color: #3e4613;
+  flex: 0 0 20%;
+  width: 15%;
+  border-radius: 10px;
+  margin: 40px;
+  box-shadow: 0 0 20px rgba(9, 9, 9, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  color: #ffffff;
+}
+
+.des {
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+}
+button {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  padding: 7px 16px;
+  min-height: 36px;
+  min-width: 36px;
+  color: #ffffff;
+  background: #008060;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px,
+    rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+}
+button:hover {
+  background: #006e52;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.testimonial-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 50px;
+  background-image: linear-gradient(180deg, #c6d957, #83941f, #5f6c16, #3e4613);
+  display: flex;
+  gap: 100px;
+  justify-content: space-between 20px;
+  flex-wrap: wrap;
+}
+figure.snip1390 {
+  font-family: "Roboto", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  background-color: #c7f1b2;
+  padding: 30px;
+  background-image: linear-gradient(
+    -25deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 10px 8px 0px rgb(167 243 208);
+}
+figure.snip1390 *,
+figure.snip1390 *:before,
+figure.snip1390 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+figure.snip1390 figcaption {
+  width: 100%;
+}
+figure.snip1390 h2,
+figure.snip1390 h4,
+figure.snip1390 blockquote {
+  margin: 0;
+}
+figure.snip1390 h2,
+figure.snip1390 h4 {
+  font-weight: 300;
+}
+figure.snip1390 h2 {
+  color: #0f0f0f;
+  font-weight: 300;
+}
+figure.snip1390 h4 {
+  color: #073001;
+}
+figure.snip1390 blockquote {
+  font-size: 1em;
+  padding: 45px 20px 40px 50px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+}
+figure.snip1390 blockquote:before {
+  font-family: "FontAwesome";
+  content: "\201C";
+  position: absolute;
+  font-size: 70px;
+  opacity: 0.25;
+  font-style: normal;
+  top: 0px;
+  left: 20px;
+}
+figure.snip1390 .profile {
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  border: solid 5px #a6a57a;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 100%;
+  background: #036876;
+  min-height: 100px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+
+  min-height: 50vh;
+}
+
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+footer .social_icon li,
+footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a,
+footer .menu li a {
+  font-size: 2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+footer .menu li a {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer menu li a:hover {
+  opacity: 3;
+}
+footer p {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+html,
+body {
+  height: 50%;
+}
+
+section {
+  background: radial-gradient(
+    ellipse at center,
+    #fffeea 0%,
+    #fffeea 35%,
+    #b7e8eb 100%
+  );
+  overflow: hidden;
+}
+
+.ocean {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg)
+    repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+.endWave {
+  display: none;
+}
+    <!--title.css-->
+    @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+.title {
+  margin: 40px 40px;
+  font-size: calc(20px + 18vh);
+  line-height: calc(100px + 20vh);
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+
+  </style>
+  
+  
+  <body>
+    <!--Nav bar-->
+    <div class="navbar">
+      <div class="header">
+        <ul class="menu">
+          <div class="title"><h1>Plants Hub</h1></div>
+          <li>Home</li>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>       
+      </div>
+    </div>
+     
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
+    <!--slideshow container-->
+    <div class="slideshow-container">
+      <div class="mySlides fade h-100">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/plant 1.jpg" style="width: 100%" />
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade h-100">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/plant 11.png" style="width: 100%" />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade h-100">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/plant 10.png" style="width: 100%" />
+        <div class="text">Caption Three</div>
+      </div>
+      <div class="mySlides fade h-100">
+        <div class="numbertext">4 / 6</div>
+        <img src="img/plant 4.jpg" style="width: 100%" />
+        <div class="text">Caption Four</div>
+      </div>
+      <div class="mySlides fade h-100">
+        <div class="numbertext">5 / 6</div>
+        <img src="img/plant 5.jpg" style="width: 100%" />
+        <div class="text">Caption Five</div>
+      </div>
+      <div class="mySlides fade h-100">
+        <div class="numbertext">6 / 6</div>
+        <img src="img/plant 9.jpg" style="width: 100%" />
+        <div class="text">Caption Six</div>
+      </div>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+
+    <div class="main">
+      <div class="cards">
+        <div class="image"><img src="img/plant 4.jpg" alt=" img" /></div>
+        <div class="title"><h3>Bacopa Plant</h3></div>
+        <div class="des">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, eum esse. Non itaque consectetur maiores sed ea quo
+            minus natus, ducimus culpa pariatur sint cum cumque id suscipit
+            temporibus molestiae.
+          </p>
+          <button type="button">Shop now</button>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="image"><img src="img/plant 7.jpg" alt=" img" /></div>
+        <div class="title"><h3>Bacopa Plant</h3></div>
+        <div class="des">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, eum esse. Non itaque consectetur maiores sed ea quo
+            minus natus, ducimus culpa pariatur sint cum cumque id suscipit
+            temporibus molestiae.
+          </p>
+          <button type="button">Shop now</button>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="image"><img src="img/plant 5.jpg" alt=" img" /></div>
+        <div class="title"><h3>Bacopa Plant</h3></div>
+        <div class="des">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, eum esse. Non itaque consectetur maiores sed ea quo
+            minus natus, ducimus culpa pariatur sint cum cumque id suscipit
+            temporibus molestiae.
+          </p>
+          <button type="button">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Testinoials-->
+    <div class="testimonial-container">
+      <figure class="snip1390">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg"
+          alt="profile-sample3"
+          class="profile"
+        />
+        <figcaption>
+          <h2>Eleanor Crisp</h2>
+          <h4>UX Design</h4>
+          <blockquote>
+            Dad buried in landslide! Jubilant throngs fill streets! Stunned
+            father inconsolable - demands recount!
+          </blockquote>
+        </figcaption>
+      </figure>
+      <figure class="snip1390 hover">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg"
+          alt="profile-sample5"
+          class="profile"
+        />
+        <figcaption>
+          <h2>Gordon Norman</h2>
+          <h4>Accountant</h4>
+          <blockquote>
+            Wormwood : Calvin, how about you? Calvin : Hard to say ma'am. I
+            think my cerebellum has just fused.
+          </blockquote>
+        </figcaption>
+      </figure>
+      <figure class="snip1390">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg"
+          alt="profile-sample6"
+          class="profile"
+        />
+        <figcaption>
+          <h2>Sue Shei</h2>
+          <h4>Public Relations</h4>
+          <blockquote>
+            The strength to change what I can, the inability to accept what I
+            can't and the incapacity to tell the difference.
+          </blockquote>
+        </figcaption>
+      </figure>
+    </div>
+    <script>
+      /* Demo purposes only */
+      $(".hover").mouseleave(function () {
+        $(this).removeClass("hover");
+      });
+    </script>
+
+    <!-- Footer -->
+    <section>
+      <footer>
+        <div class="ocean">
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+        <ul class="social_icon">
+          <li>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+        </ul>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <p>@2023 Plants Hub | All rights reserved.</p>
+      </footer>
+      <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    </section>
+    <!-- Footer -->
+  </body>
+</html>
